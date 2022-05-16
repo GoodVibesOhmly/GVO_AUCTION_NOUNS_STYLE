@@ -1,3 +1,9 @@
+The contracts are forked directly from the Nouns DAO repo with a few novel customisations by the Metaverse Engineers as follows;
+Integration of multi-token payments for accepting bids in various ERC-20 tokens including $MONA token. We also added the ability to freeze certain payment methods in case we need to do so. In order to support ERC20 payment, we also added an oracle feed to the auction house contract.
+Full deployment to Polygon Network. Custom deployment scripts for editing names and ticker symbols.
+Reduced gas fees where NFTs are only minted on a successful auction with 1 or more bids above the reserve price. If there is little interest in a certain NFT, it will simply not mint. The current nouns code always mints, and is actually more costly if there is no successful bid as this requires a subsequent burn. Updated the Nouns DAO subgraph code and Frontend code to meet our standards for UI/UX as well as respond to the necessary contract changes.
+Upgradeable versions of the contracts. In the future upgrade permissions can be forwarded on to a DAO or simply to the dead address to make the contracts fully immutable.
+
 # nouns-monorepo
 
 Nouns DAO is a generative avatar art collective run by a group of crypto misfits.
